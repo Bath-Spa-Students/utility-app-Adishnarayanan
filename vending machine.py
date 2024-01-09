@@ -1,5 +1,4 @@
-from prettytable import prettytable
-A1 ={"Item": "Dew", "Price": "3.00", "Stock":"12"}
+A1 ={"Item": "Mountain Dew", "Price": "3.00", "Stock":"12"}
 A2 ={"Item": "Pepsi", "Price": "3.00", "Stock":"15"}
 B1= {"Item": "Oman chips", "Price": "1.00", "Stock":"10"}
 B2= {"Item": "Sohar chips", "Price": "1.00", "Stock":"8"}
@@ -10,16 +9,43 @@ D2= {"Item": "Juice", "Price": "2.00", "Stock":"10"}
 E1= {"Item": "Red Bull", "Price": "10.00", "Stock":"10"}
 E2= {"Item": "Monster", "Price": "15.00", "Stock":"10"}
 
+print("-----------------------------------------------------------------")
+ 
+print("""HELLO!
+
+WELCOME TO ADISH'S VENDING MACHINE 
+
+WE HAVE VARIOUS VARIETIES OF SNACKS , CHOCOLATE  
+AND DRINKS FOR YOU""") 
+print("""+----------------------------------------------------------------------------+
+|                            ADISH'S VENDING MACHINE                         |
+|                                                                            |
+|                                    MENU                                    |
++----------------------------------------------------------------------------+
+|                                 DRINKS &SNACKS                             |
++----------------------------------------------------------------------------+
+|Code|            ITEMS                 |       PRICE       |  ON THE MARKET |
++----------------------------------------------------------------------------+
+| 01 | MOUNTAIN DEW                     |       3.00        |       12       | 
+| 02 | PEPSI                            |       3.00        |       15       |
+| 03 | OMAN CHIPS                       |       1.50        |       10       |
+| 04 | SOHAR CHIPS                      |       1.50        |       08       |
+| 05 | KIKAT                            |       4.00        |       10       |  
++----------------------------------------------------------------------------+
+|                              DRINKS & CHOCOLATE                            |
++----------------------------------------------------------------------------+
+|Code|              ITEMS               |      PRICE      |  ON THE MARKET   |
++----------------------------------------------------------------------------+
+| 06 | SNICKERS                         |      5.00       |       05         |
+| 07 | WATER                            |      1.00       |       20         |
+| 08 | JUICE                            |      2.00       |       10         |
+| 09 | REDBULL                          |     10.00       |       10         |
+| 10 | MONSTER                          |     15.00       |       10         | 
++----------------------------------------------------------------------------+""")
 items = (A1,A2,B1,B2,C1,C2,D1,D2,E1,E2)
 
-table = prettytable()
-table.field_names = ["Item", "Price", "Stock"]
-
-for item in items:
-    table.add_row([item["Item"], item["Price"], item["Stock"]])
-
 print("Items Available for Purchase:")
-print(table)
+
 
 ITEMS = input("Enter the name of the item you want to buy: ")
 item_code = None
